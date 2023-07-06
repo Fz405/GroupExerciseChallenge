@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GroupExerciseChallenge</string>
+    <!-- Login Activity -->
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Log In</string>
+    <string name="register_text">Don not have an account? Register here</string>
+
+    <!-- Register Activity -->
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="register_button">Register</string>
+    <string name="login_text">Already have an account? Log in</string>
+    <string name="login_logo">Login Logo</string>
+    <!-- Register Activity -->
+    <string name="register_logo">Register Logo</string>
+    <string name="login_screen">Login to choose exercise challenges</string>
+    <string name="age_hint">"age "</string>
+    <string name="Register_screen">"Register here "</string>
+</resources>

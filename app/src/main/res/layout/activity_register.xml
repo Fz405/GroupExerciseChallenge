@@ -1,0 +1,88 @@
+<!-- activity_register.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".view.RegisterActivity"
+    android:background="@drawable/bg">
+    <TextView
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Register_screen"
+        android:textSize="34sp"
+        android:textColor="@color/purple_700"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <EditText
+        android:gravity="center"
+        android:id="@+id/usernameEditText"
+        android:layout_width="@dimen/editTxt_width"
+        android:layout_height="@dimen/editTxt_height"
+        android:layout_marginTop="8dp"
+        android:hint="@string/username_hint"
+        android:inputType="text"
+        android:background="@drawable/bg_simple"
+        android:imeOptions="actionNext" />
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/ageEditText"
+        android:layout_width="@dimen/editTxt_width"
+        android:layout_height="@dimen/editTxt_height"
+        android:layout_marginTop="8dp"
+        android:hint="@string/age_hint"
+        android:inputType="number"
+        android:textSize="@dimen/text_size_large"
+        android:imeOptions="actionNext"
+        android:background="@drawable/bg_simple"/>
+
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/passwordEditText"
+        android:background="@drawable/bg_simple"
+        android:layout_width="@dimen/editTxt_width"
+        android:layout_height="@dimen/editTxt_height"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:textSize="@dimen/text_size_large"
+        android:imeOptions="actionNext" />
+
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/confirmPasswordEditText"
+        android:layout_width="@dimen/editTxt_width"
+        android:layout_height="@dimen/editTxt_height"
+        android:background="@drawable/bg_simple"
+        android:layout_marginTop="8dp"
+        android:textSize="@dimen/text_size_large"
+        android:hint="@string/confirm_password_hint"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone" />
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="625dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/register_button" />
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textColor="@color/purple_700"
+        android:text="@string/login_text" />
+
+</LinearLayout>
