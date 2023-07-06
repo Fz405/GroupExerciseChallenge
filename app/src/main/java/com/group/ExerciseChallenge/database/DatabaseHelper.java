@@ -55,17 +55,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         User user = null;
         if (cursor != null && cursor.moveToFirst()) {
-            int id = cursor.getInt(cursor.getColumnIndex(COLUMN_ID));
-            String storedUsername = cursor.getString(cursor.getColumnIndex(COLUMN_USERNAME));
-            String storedPasswordHash = cursor.getString(cursor.getColumnIndex(COLUMN_PASSWORD_HASH));
-            Integer storedage= cursor.getInt(cursor.getColumnIndex(COLUMN_AGE));
+            int idIndex = cursor.getColumnIndex(COLUMN_ID);
+            int usernameIndex = cursor.getColumnIndex(COLUMN_USERNAME);
+            int passwordHashIndex = cursor.getColumnIndex(COLUMN_PASSWORD_HASH);
+            int ageIndex = cursor.getColumnIndex(COLUMN_AGE);
 
-            user = new User(storedUsername, "", storedage);
-            user.setId(id);
+            if (idIndex != -1 && usernameIndex != -1 && passwordHashIndex != -1 && ageIndex != -1) {
+                int id = cursor.getInt(idIndex);
+                String storedUsername = cursor.getString(usernameIndex);
+                String storedPasswordHash = cursor.getString(passwordHashIndex);
+                int storedAge = cursor.getInt(ageIndex);
 
-            // Set the password hash directly instead of setting the password
-            user.setPassword(storedPasswordHash);
-            user.setAge(storedage);
+                user = new User(storedUsername, "", storedAge);
+                user.setId(id);
+                user.setPassword(storedPasswordHash);
+                user.setAge(storedAge);
+            }
         }
 
         if (cursor != null) {
